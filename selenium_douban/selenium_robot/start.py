@@ -14,18 +14,22 @@ from get_Code import *
 from config import *
 from Code_Ocr import *
 from UI_ele_API import *
+from AcctGrowth import *
+
 
 def main():
-    try:
+    # try:
         # 创建驱动实例
-        global driver
-        email = LOGIN_EMAIL1
-        password = LOGIN_PWD1
-        # 登陆
-        driver = login(email, password)
-        # 访问页面
-        time.sleep(0.5)
-        while True:
+    global driver
+    email = LOGIN_EMAIL1
+    password = LOGIN_PWD1
+    # 登陆
+    driver = login(email, password)
+    pprint('11111111111')
+    AcctGrowth(driver)
+    # 访问页面
+    time.sleep(0.5)
+        # while True:
             # post_tiezi('https://www.douban.com/group/topic/201068579/',
             #            '哈哈哈哈哈哈哈')
             # post_tiezi('https://www.douban.com/group/topic/190341182/',
@@ -37,26 +41,26 @@ def main():
             # post_tiezi('https://www.douban.com/group/topic/200084831/',
             #            '最近正在学习这个部分，大家有类似的资料整理需求欢迎加我哈哈哈')
 
-            post_tiezi('https://www.douban.com/group/topic/200963909/',
-                       'ddd')
-            post_tiezi('https://www.douban.com/group/topic/200963021/',
-                       'ddd')
-            post_tiezi('https://www.douban.com/group/topic/200962757/',
-                       'ddd')
-            post_tiezi('https://www.douban.com/group/topic/200962474/',
-                       'ddd')
-            post_tiezi('https://www.douban.com/group/topic/200961519/',
-                       'ddd')
-            post_tiezi('https://www.douban.com/group/topic/200961200/',
-                       'ddd')
-            post_tiezi('https://www.douban.com/group/topic/200960316/',
-                       'ddd')
-            time.sleep(3600)
-    except Exception as identifier:
-        pass
-        # pprint('任务失败')
-        # time.sleep(100)
-        # main()
+            # post_tiezi('https://www.douban.com/group/topic/200963909/',
+            #            'ddd')
+            # post_tiezi('https://www.douban.com/group/topic/200963021/',
+            #            'ddd')
+            # post_tiezi('https://www.douban.com/group/topic/200962757/',
+            #            'ddd')
+            # post_tiezi('https://www.douban.com/group/topic/200962474/',
+            #            'ddd')
+            # post_tiezi('https://www.douban.com/group/topic/200961519/',
+            #            'ddd')
+            # post_tiezi('https://www.douban.com/group/topic/200961200/',
+            #            'ddd')
+            # post_tiezi('https://www.douban.com/group/topic/200960316/',
+            #            'ddd')
+            # time.sleep(3600)
+    # except Exception as identifier:
+    #     pass
+    #     pprint('任务失败')
+    #     time.sleep(100)
+    #     main()
 
 
 def is_inGroup():
@@ -211,7 +215,7 @@ def get_tracks(distance):
     t = 0.2
     tracks = []
     current = 0
-    mid = distance*4/5
+    mid = distance * 4 / 5
     while current < distance:
         if current < mid:
             a = 2
@@ -219,11 +223,11 @@ def get_tracks(distance):
             a = -3
 
         v0 = v
-        s = v0*t + 0.5*a*(t**2)
+        s = v0 * t + 0.5 * a * (t ** 2)
         current += s
         tracks.append(round(s))
 
-        v = v0 + a*t
+        v = v0 + a * t
 
     return tracks
 

@@ -5,11 +5,11 @@
 # LOG_FILE = 'logs/doubanrobot.log'
 
 # 伊丽莎白吃白喝 账号
-# LOGIN_EMAIL1 = 'marost@163.com'
-# LOGIN_PWD1 = 'hoge1234'
+# LOGIN_EMAIL1 = ''
+# LOGIN_PWD1 = ''
 # 测试账号
-LOGIN_EMAIL1 = '18711824424'
-LOGIN_PWD1 = 'abc123cba'
+LOGIN_EMAIL1 = ''
+LOGIN_PWD1 = ''
 
 # XPATH 元素路径，2020.11.20
 HOME = "https://www.douban.com/"
@@ -22,6 +22,10 @@ LOGIN_CAPTCHA_IFRAME = '//*[@id="tcaptcha_iframe"]'
 LOGIN_CAPTCHA_HX = '//*[@id="tcaptcha_drag_thumb"]'
 
 LOGIN_SUCCESS_INPUT = '//*[@id="isay-label"]'
+RANDOM_URL = '//a[@href]'
+
+#XPATH导航 豆瓣
+DOUBAN_TOP_NAV = '//div[@class="global-nav-items"]/ul/li'
 # endpoints
 # people
 # DOUBAN_HOME = "https://www.douban.com/"
